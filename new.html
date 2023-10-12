@@ -25,28 +25,6 @@
                 <header>
                 <h1 class="p-3">SHARRON HENDERSON</h1>
                 <h2 class="p-3">Software Developer</h2>
-                <h3 class="text-center"><body onload="startTime()">
-
-                    <div id="txt"></div>
-                    
-                    <script>
-                    function startTime() {
-                      const today = new Date();
-                      let h = today.getHours();
-                      let m = today.getMinutes();
-                      let s = today.getSeconds();
-                      m = checkTime(m);
-                      s = checkTime(s);
-                      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-                      setTimeout(startTime, 1000);
-                    }
-                    
-                    function checkTime(i) {
-                      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                      return i;
-                    }
-                    </script>
-                    </body></h3>
                 </header> 
             </div>
             </div>
@@ -59,9 +37,9 @@
             <div class="col col-lg-4 border border-warning border-3">
                 <div class="container p-4">
                 <p>
-                    <h3>PROFILE</h3>
+                    <h3 class="text-decoration-underline">PROFILE</h3>
                     <p class="p-3">An experienced career professional looking to integrate information technology with an extensive healthcare background. Highly intersted in both software development and informatics. </p>
-                    <h3>SKILLS</h3>
+                    <h3 class="text-decoration-underline">SKILLS</h3>
                     <ul>
                         <li>Python</li>
                         <li>JavaScript</li>
@@ -92,7 +70,7 @@
                 <h3 class="p-1">IvyTech Community College</h3>
 
                 <h3 class="p-1">Software Development Bootcamp</h3>
-                <h4 class="p-1">Current Courses</h4>
+                <h4 class="p-4 text-decoration-underline">Current Courses</h4>
                 <ul>
                    <li>Computing Logic</li>
                    <li>Website Development</li>
@@ -101,9 +79,43 @@
                    <li>Web Application Development</li>
                    <li>Modern Software Practices</li>
                 </ul>
+                <div class="container">
+                <h3 class="text-center text-decoration-underline p-4">Countdown To Graduation: <span id="demo"></span><script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("December 17, 2023 00:00:00").getTime();
+                    
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+                    
+                    // Get today's date and time
+                    var now = new Date().getTime();
+                      
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+                      
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                      
+                    // Output the result in an element with id="demo"
+                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+                      
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                      clearInterval(x);
+                      document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                  }, 1000);
+                  </script>
+                    </div>
+                  
+
                     </main>
                     <main>
-                    <h3>Previous Education</h3>
+                    <h3 class=" p-4 text-decoration-underline">Previous Education</h3>
                     <ul>
                         <li>B.S. Biological Sciences, Northern Kentucky University</li>
                         <li>MBA Business Analytics, University of Hartford</li>
@@ -122,3 +134,27 @@
 
 </body>
 </html>
+
+
+   <body onload="startTime()">
+
+                    <div id="txt"></div>
+                    
+                    <script>
+                    function startTime() {
+                      const today = new Date();
+                      let h = today.getHours();
+                      let m = today.getMinutes();
+                      let s = today.getSeconds();
+                      m = checkTime(m);
+                      s = checkTime(s);
+                      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+                      setTimeout(startTime, 1000);
+                    }
+                    
+                    function checkTime(i) {
+                      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                      return i;
+                    }
+                    </script>
+                    </body></h3>   
